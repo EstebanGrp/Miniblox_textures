@@ -34,7 +34,7 @@ const URL_MAP = {
   "https://miniblox.io/textures/models/armor/iron_layer_2.png": "https://raw.githubusercontent.com/heythereu/Miniblox-Textures/main/armor/iron_layer_2.png",
   "https://miniblox.io/textures/models/armor/leather_layer_1.png": "https://raw.githubusercontent.com/heythereu/Miniblox-Textures/main/armor/leather_layer_1.png",
   "https://miniblox.io/textures/models/armor/leather_layer_2.png": "https://raw.githubusercontent.com/heythereu/Miniblox-Textures/main/armor/leather_layer_2.png",
-  "https://miniblox.io/assets/default-DKNlYibk.png":"https://raw.githubusercontent.com/EstebanGrp/Miniblox_textures/refs/heads/main/Miniblox%20betterTextures/textures/6ad2ee191d434a996766b500a1eb197e-export.gif",
+  "https://miniblox.io/assets/default-DKNlYibk.png":"https://raw.githubusercontent.com/EstebanGrp/Miniblox_textures/refs/heads/main/Back%202%20Basics%20for%20Survival/Fondos/1123121_PhotoGrid.png",
 };
 
 let rules = [];
@@ -70,4 +70,5 @@ chrome.declarativeNetRequest.updateDynamicRules(
       console.log("Rules updated");
     }
   }
+
 );
