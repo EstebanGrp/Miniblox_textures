@@ -41,34 +41,39 @@ let rules = [];
 let idx = 1;
 
 for (const [src, dst] of Object.entries(URL_MAP)) {
+
+  let type = "image";
+  if (src.endsWith(".otf")) type = "font";
+  else if (src.endsWith(".css")) type = "stylesheet";
+  else if (src.endsWith(".js")) type = "script"; 
+
   rules.push({
-    "id": idx++,
-    "action": {
-      "type": "redirect",
-      "redirect": { "url": dst }
+    id: idx++,
+    action: {
+      type: "redirect",
+      redirect: { url: dst }
     },
-    "condition": {
-      "urlFilter": src,
-     "resourceTypes": src.endsWith(".otf")
-  ? ["font"]
-  : src.endsWith(".css")
-  ? ["stylesheet"]
-  : ["image"]
+    condition: {
+      urlFilter: src,
+      resourceTypes: [type]
     }
   });
 }
 
+//
 chrome.declarativeNetRequest.updateDynamicRules(
   {
     addRules: rules,
-    removeRuleIds: rules.map(rule => rule.id)
+    removeRuleIds: []
   },
   () => {
     if (chrome.runtime.lastError) {
       console.error("Error updating:", chrome.runtime.lastError);
     } else {
-      console.log("Rules updated");
+      console.log("Rules updated:", rules.length);
     }
   }
+);
 
 );
+
