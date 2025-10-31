@@ -1,5 +1,5 @@
 const URL_MAP = {
-  "https://miniblox.io/textures/spritesheet.png": "https://raw.githubusercontent.com/EstebanGrp/Miniblox_textures/refs/heads/main/spritesheet%20for%20survival-Recovered.png",
+  "https://miniblox.io/textures/spritesheet.png": "https://raw.githubusercontent.com/EstebanGrp/Miniblox_textures/refs/heads/main/spritesheet%20for%20survival-xray.png",
   "https://miniblox.io/assets/Miniblox-Regular-Lz-C8nWS.otf": "https://raw.githubusercontent.com/heythereu/Miniblox-Textures/main/assets/Miniblox-Regular-Lz-C8nWS.otf",
   "https://miniblox.io/textures/entity/chicken/chicken.png": "https://raw.githubusercontent.com/heythereu/Miniblox-Textures/main/entity/chicken.png",
   "https://miniblox.io/textures/entity/cow/cow.png": "https://raw.githubusercontent.com/heythereu/Miniblox-Textures/main/entity/cow.png",
@@ -77,4 +77,5 @@ function applyRedirectRules() {
       }
     }
   );
+
 }
